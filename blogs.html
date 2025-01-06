@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khwab Ki Tabeer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* باڈی کا اسٹائل */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1c1c1c, #4A4A4A);
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+        }
+
+        /* ہوم آئیکون بٹن */
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: #FFD700;
+            color: #1c1c1c;
+            font-size: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            z-index: 1000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .home-button:hover {
+            transform: scale(1.2);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .home-button i {
+            color: #1c1c1c;
+        }
+
+        /* مووینگ ٹیکسٹ کا اسٹائل */
+        #moving-text-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin: 20px 0;
+            height: 3rem;
+        }
+
+        #moving-text {
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 1.8rem;
+            color: #FFD700;
+            animation: scroll 25s linear infinite;
+        }
+
+        /* مووینگ اینیمیشن */
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* امیج کنٹینر */
+        #elem-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+
+        /* انفرادی امیجز */
+        .elem {
+            width: 300px;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .elem:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        /* امیج پر ایفیکٹ */
+        .elem:nth-child(5) {
+            animation: shake 5s infinite ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(10px, -5px);
+            }
+            50% {
+                transform: translate(-10px, 5px);
+            }
+            75% {
+                transform: translate(5px, -10px);
+            }
+        }
+
+        /* اوورلے ایفیکٹ */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            transition: background 0.3s;
+        }
+
+        .elem:hover .overlay {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* امیج کا ٹیکسٹ */
+        .elem h2 {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #FFD700;
+            text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.7);
+            font-size: 1.5rem;
+        }
+
+        /* خاص کلاس برائے سرخ ٹیکسٹ */
+        .red-text {
+            color: red;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- ہوم بٹن -->
+    <a href="index.html" class="home-button"><i class="material-icons">home</i></a>
+
+    <!-- مووینگ ٹیکسٹ -->
+    <div id="moving-text-container">
+        <div id="moving-text">
+            Dream Interpretation Information English Urdu Roman Urdu Hindi Up can also ask dreams.
+        </div>
+    </div>
+
+    <!-- امیج کنٹینر -->
+    <div id="elem-container">
+        <a href="open blog/roman.html">
+            <div class="elem" style="background-image: url('https://i.pinimg.com/736x/2b/93/af/2b93afe21a43fa3b8804b20960c24829.jpg');">
+                <div class="overlay"></div>
+                <h2>KHWAB KI TABEER</h2>
+            </div>
+        </a>
+
+        <a href="open blog/urdu.html">
+            <div class="elem" style="background-image: url('https://i.pinimg.com/474x/cd/36/be/cd36be4a52bff384123925128e793c04.jpg');">
+                <div class="overlay"></div>
+                <h2>خواب کی تعبیر</h2>
+            </div>
+        </a>
+
+        <a href="open blog/english.html">
+            <div class="elem" style="background-image: url('https://i.pinimg.com/474x/17/90/88/1790885d872e6f370285454b8d150ad3.jpg');">
+                <div class="overlay"></div>
+                <h2>DREAM IN English</h2>
+            </div>
+        </a>
+
+        <a href="open blog/hindi.html">
+            <div class="elem" style="background-image: url('https://i.pinimg.com/474x/0d/69/9c/0d699c3c7338cd4f4419120587b435a3.jpg');">
+                <div class="overlay"></div>
+                <h2>सपनों की व्याख्या</h2>
+            </div>
+        </a>
+
+        <a href="open blog/watching.html">
+            <div class="elem" style="background-image: url('https://i.pinimg.com/736x/23/12/2e/23122e1dc3354012e407606dc2720af2.jpg');">
+                <div class="overlay"></div>
+                <h2 class="red-text">You can ask the interpretation of the dream</h2>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

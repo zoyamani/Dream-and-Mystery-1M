@@ -1,0 +1,35 @@
+<script>
+    function fetchVideoDetails(videoId) {
+        var apiKey = 'YOUR_API_KEY'; // Apni API key yahan dalein
+        var apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&part=snippet,contentDetails,statistics&key=${apiKey}`;
+        
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                if (data.items && data.items.length > 0) {
+                    var video = data.items[0].snippet;
+                    var title = video.title;
+                    var description = video.description;
+                    var tags = video.tags ? video.tags.join(', ') : 'No tags available';
+    
+                    // Display details on the page
+                    document.getElementById('videoTitle').innerText = title;
+                    document.getElementById('videoDescription').innerText = description;
+                    document.getElementById('videoTags').innerText = tags;
+                } else {
+                    console.log('No video found for this ID');
+                }
+            })
+            .catch(error => console.error('Error fetching video data:', error));
+    }
+    
+    // Example: Call the function with your video ID
+    fetchVideoDetails('dQw4w9WgXcQ'); // Replace with actual video ID
+    </script>
+    
+    <div id="videoDetails">
+        <h2 id="videoTitle"></h2>
+        <p id="videoDescription"></p>
+        <p id="videoTags"></p>
+    </div>
+    

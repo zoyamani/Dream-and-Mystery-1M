@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ایڈمن پینل - بلاگ پوسٹ کریں</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .form-container {
+            width: 70%;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        input[type="text"], input[type="url"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>ایڈمن پینل</h1>
+    </div>
+
+    <!-- Blog Post Form -->
+    <div class="form-container">
+        <form action="save_blog.php" method="POST">
+            <input type="text" name="title" placeholder="بلاگ کا ٹائٹل" required>
+            <textarea name="content" placeholder="بلاگ کی تفصیل" required></textarea>
+            <input type="text" name="hashtags" placeholder="ہیش ٹیگ (جیسے #خواب #تعبیر)" required>
+            <input type="url" name="image_link" placeholder="تصویر کا لنک">
+            <input type="url" name="video_link" placeholder="ویڈیو کا لنک">
+            <button type="submit">پوسٹ کریں</button>
+        </form>
+    </div>
+
+</body>
+</html>

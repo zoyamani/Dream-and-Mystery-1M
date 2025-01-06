@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+</head>
+<body>
+    <h1>All Blog Posts</h1>
+    <div id="posts"></div>
+
+    <script>
+        // بلاگز لوڈ کرنے کے لیے fetch API کا استعمال
+        fetch('../php/fetch_posts.php')
+            .then(response => response.json())
+            .then(data => {
+                const postsDiv = document.getElementById('posts');
+                data.forEach(post => {
+                    const postDiv = document.createElement('div');
+                    postDiv.innerHTML = `
+                        <h2>${post.title}</h2>
+                        <p>${post.content}</p>
+                        <small>Posted on: ${post.date}</small>
+                        <hr>
+                    `;
+                    postsDiv.appendChild(postDiv);
+                });
+            })
+            .catch(error => console.error('Error loading posts:', error));
+    </script>
+</body>
+</html>

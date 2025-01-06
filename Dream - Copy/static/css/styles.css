@@ -1,0 +1,32 @@
+.blog-container {
+    margin: 20px auto;
+    width: 80%;
+    font-family: Arial, sans-serif;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.blog {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.blog h2 {
+    color: #333;
+}
+
+.blog img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}

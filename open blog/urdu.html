@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khawab Ki Tabeer - Dreams Interpretation Blog">
+    <meta name="keywords" content="dream interpretation, khwab ki tabeer, Islamic dream interpretation, Urdu dreams, khwab mein saanp dekhna, dream meanings in Urdu">
+    <title>Khawab Ki Tabeer - Your Dream Interpretation Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            direction: rtl; /* Right to Left for Urdu content */
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Search bar style */
+        .search-bar {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            font-size: 18px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .search-bar input[type="text"]:focus {
+            border-color: #0056b3;
+        }
+
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .blog-post {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .blog-post h3 {
+            color: #333;
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        .blog-post p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Tags & Hashtags Section */
+        .tags-section {
+            margin-top: 30px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .tags-section h3 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .tag, .hashtag {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tag:hover, .hashtag:hover {
+            background-color: #0056b3;
+        }
+
+        /* Detailed Article Section */
+        .blog-detail {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: block;
+        }
+
+        .blog-detail h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .blog-detail p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .scrolling-text {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .scrolling-text p {
+            display: inline-block;
+            white-space: nowrap;
+            padding-right: 100%;
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .footer-line {
+            border-top: 2px solid #333;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Khawab Ki Tabeer - خواب کی تعبیر</h1>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" onkeyup="searchBlogs()" placeholder="Apne blog ko talash karein...">
+    </div>
+
+    <!-- Blog Posts Section -->
+    <div class="blog-posts" id="blogPosts">
+        <div class="blog-post" data-title="Khawab Mein Sanp Dekhna" data-description="Khawab Mein Sanp Dekhna ek ahem alamat hai.">
+            <img src="https://i.pinimg.com/736x/40/0a/24/400a245682c41ae2988231c87c986769.jpg" alt="Khawab Mein Sanp Dekhna">
+            <h3>Khawab Mein Sanp Dekhna</h3>
+            <p>Khawab Mein Sanp Dekhna ek ahem alamat hai.</p>
+        </div>
+    </div>
+
+    <!-- Detailed Article Section -->
+    <div class="blog-detail">
+        <h2>Khawab Mein Sanp Dekhna - Tafseel Ke Saath Tabeer</h2>
+        <p>Khawab Mein Sanp Dekhna ek ahem aur gehri tabeer rakhta hai. Islami tabeeraton ke mutabiq, sanp ka khawab aksar kisi chhupi hui dushmani, fitna, ya zindagi ke mushkil halaat ki taraf ishara karta hai. Har shakhs ke haalaat aur khawab ki tafseelat ke mutabiq iski tabeer alag ho sakti hai. Neeche kuch tafseelaat aur tabeerain di ja rahi hain jo aapko apne khawab ko samajhne mein madad dengi.</p>
+
+        <h4>Sanp Ka Dekhna</h4>
+        <p>Agar kisi ne khawab mein sanp dekha, to iska matlab hai ke uske aird-gird koi dushman maujood hai, jo apni dushmani ko chhupaye hue hai. Sanp ka dekhnna aksar doston, rishtedaron, ya nazdeeki logon ke darmiyan chhupi hui dushmani ki nishani hoti hai.</p>
+
+        <h4>Sanp Ka Kaam Karna Khawab Mein</h4>
+        <ul>
+            <li><strong>Sanp Ka Katna:</strong> Agar sanp khawab mein aapko kat le, to ye kisi dushman ke hamlay ki nishani hai.</li>
+            <li><strong>Sanp Ka Peecha Karna:</strong> Agar sanp aapka peecha kare, to ye kisi khatrey ki alamat ho sakti hai jisse aapko bachne ki zarurat hai.</li>
+        </ul>
+    </div>
+
+    <!-- Tags & Hashtags Section -->
+    <div class="tags-section">
+        <h3>Related Tags & Hashtags</h3>
+        <div class="tags-container">
+            <div class="tag">Sanp</div>
+            <div class="tag">Khawab</div>
+            <div class="tag">Khawab Mein Sanp Dekhna</div>
+            <div class="tag">Khawab Mein Kala Sanp Dekhna</div>
+            <div class="tag">Khawab Mein Peela Sanp Dekhna</div>
+            <div class="tag">Khawab Mein Sanp Ka Katna</div>
+            <div class="tag">Khawab Mein Sanp Maarna</div>
+            <div class="tag">Khawab Mein Sanp Ka Peecha Karna</div>
+            <div class="hashtag">#KhawabMeinSanpDekhna</div>
+            <div class="hashtag">#SanpKiTabeer</div>
+            <div class="hashtag">#KhawabKiTabeer</div>
+        </div>
+        <!-- Blog Posts Section -->
+<div class="blog-posts" id="blogPosts">
+    <div class="blog-post" data-title="Khawab Mein Aag Dekhna" data-description="Khawab Mein Aag Dekhna ek ahem aur taweel ki talab karne wala khwab hai.">
+        <img src="https://i.pinimg.com/736x/40/0a/24/400a245682c41ae2988231c87c986769.jpg" alt="Khawab Mein Aag Dekhna">
+        <h3>Khawab Mein Aag Dekhna</h3>
+        <p>Khawab Mein Aag Dekhna ek ahem aur taweel ki talab karne wala khwab hai.</p>
+    </div>
+</div>
+
+<!-- Detailed Article Section -->
+<div class="blog-detail">
+    <h2>Khawab Mein Aag Dekhna - Tabeer Aur Tafseer</h2>
+    <p>Khawab mein aag dekhna ek ahem aur taweel ki talab karne wala khwab hai. Aag ka khwab aksar purani soch aur jazbaat ka izhar karta hai. Ye khwab har shakhs ke liye mukhtalif tabeer rakhta hai, aur yeh tabeer us shakhs ke halat aur zindagi ki surat-e-haal par mabni hoti hai. Aaj hum is blog mein khwab mein aag dekhne ki mukhtalif tabeer aur uske hawale se jo manasik aur ruhani asraat hain, unko samajhne ki koshish karenge.</p>
+
+    <h4>1. Khwab Mein Aag Lagna:</h4>
+    <p>Agar aap khwab mein aag lagti dekh rahe hain, toh yeh ek ahem warning ho sakta hai. Aag ka lagna aapki zindagi mein kisi badi mushkil ya khatra ka ishaara ho sakta hai. Iska matlab yeh bhi ho sakta hai ke aapko apni jazbaat par control rakhna zaroori hai, kyunki yeh jazbaat agar out of control ho gaye, toh aapko nuqsan pohanchane ka khauf ho sakta hai.</p>
+
+    <h4>2. Khwab Mein Aag Jalti Dekhna:</h4>
+    <p>Jab khwab mein aap kisi jagah par aag jalti dekhte hain, toh yeh aapke andar ka shiddat aur guroor ka izhar ho sakta hai. Aapke andar kisi baat ko lekar gehri pareshani ya khauf ho sakti hai. Is tarah ke khwab ka yeh matlab ho sakta hai ke aapko apne emotions ko samajhne ki zarurat hai.</p>
+
+    <h4>3. Khwab Mein Aag Ka Fa'al:</h4>
+    <p>Khwab mein aag ka fa'al (fa'ala) aapke liye ek tareeqa hai apne muamlat mein behtari laane ka. Yeh is baat ka ishaara ho sakta hai ke aap apne life goals par dhyaan de rahe hain. Yeh khwab kaafi positive bhi ho sakta hai, jab aap apne jazbaat ko daikh kar us par control kar lete hain.</p>
+
+    <h4>4. Khwab Mein Aag Ka Khandani Tabeer:</h4>
+    <p>Agar kisi khandan mein aag ka khwab dekhte hain, toh is ka matlab yeh ho sakta hai ke aapko apni family ya khandani mamlaat mein kuch asraat nazar aa rahe hain. Aag ka symbol aapke ghar ke mahool aur family ke andar chal rahi baat-cheet ya khataas se bhi related ho sakta hai.</p>
+
+    <h4>5. Khwab Mein Aag Ka Safar:</h4>
+    <p>Khwab mein aag ka safar karna aapko apni life mein naye challenges ka samna karne ka ishaara de sakta hai. Agar aap khwab mein aag ke raste par safar kar rahe hain, toh yeh aapki himmat aur mustahkam iraday ki taraf ishara ho sakta hai.</p>
+
+    <h4>6. Khwab Mein Aag Ka Samna Karna:</h4>
+    <p>Agar aap khwab mein aag ka samna kar rahe hain, toh is ka matlab hai ke aap apne musalsal mushkilat ka samna kar rahe hain. Yeh khwab aapko ye batata hai ke aapko apni himmat aur sabr ka izhar karna hoga.</p>
+
+    <h4>7. Khwab Mein Aag Se Bachna:</h4>
+    <p>Agar aap khwab mein aag se bach rahe hain, toh yeh ek positive tabeer hai. Yeh khwab is baat ka ishaara ho sakta hai ke aap apne jazbaat ya apne zindagi ke mushkil rasto se bach rahe hain.</p>
+
+    <h4>8. Khwab Mein Aag Ka Phailna:</h4>
+    <p>Agar khwab mein aag ka phailna dikhayi de, toh yeh aapke liye ek indication hai ke koi baat ya mushkil aapke andar phail rahi hai. Yeh khwab is baat ka ishaara ho sakta hai ke aapko apni zindagi mein koi cheez phailne se rokni hogi, chahe wo koi jazbaat ho ya koi masla.</p>
+
+    <h4>9. Khwab Mein Aag Ka Control Karna:</h4>
+    <p>Agar aap khwab mein aag ko control kar rahe hain, toh yeh aapke mental aur emotional stability ka izhar hai. Iska matlab hai ke aap apne emotions aur situations par control rakhte hain, aur apni zindagi mein behtari layein.</p>
+
+    <h4>10. Khwab Mein Aag Se Jalna:</h4>
+    <p>Agar khwab mein aap aag se jalte hain, toh is ka matlab ho sakta hai ke aap kisi situation mein nuqsan ka shikar ho rahe hain. Yeh khwab apko apne faislon par dobara sochne ki zaroorat dikhata hai.</p>
+
+    <h4>11. Khwab Mein Aag Aur Khoon Dekhna:</h4>
+    <p>Agar khwab mein aap aag aur khoon dekhte hain, toh yeh ek ahem aur kafi dar aur mushkilat ka ishaara ho sakta hai. Aapko apni zindagi ke kaafi hisso mein purani ghalat fehmiyaan aur issues ko door karne ki zaroorat hai.</p>
+
+    <h4>12. Khwab Mein Aag Ki Shiddat:</h4>
+    <p>Agar khwab mein aag ki shiddat bohot zyada ho, toh yeh is baat ka izhar hai ke aapki life mein kisi cheez ki intensity ya pressure kaafi badh gaya hai. Yeh khwab aapko apne plans ya projects ko dekh kar phir se review karne ki zaroorat dikhata hai.</p>
+
+    <h4>13. Khwab Mein Aag Ka Khauf:</h4>
+    <p>Agar aap khwab mein aag se dar rahe hain, toh yeh aapke andar ka khauf aur anxiety ka izhar hai. Yeh khawab aapko apni life ko control karne aur apne fears ko samajhne ki zaroorat dikhata hai.</p>
+
+    <h4>14. Khwab Mein Aag Aur Khushi:</h4>
+    <p>Agar aap khwab mein aag dekhte hue khush hain, toh yeh kaafi positive tabeer hai. Yeh aapko yeh batata hai ke aap apne emotions ko samajh rahe hain aur aapki zindagi mein positivity aur strength aa rahi hai.</p>
+
+</div>
+
+<!-- Tags & Hashtags Section -->
+<div class="tags-section">
+    <h3>Related Tags & Hashtags</h3>
+    <div class="tags-container">
+        <div class="tag">Khwab Mein Aag Dekhna</div>
+        <div class="tag">Aurat Ka Khwab Mein Aag Dekhna</div>
+        <div class="tag">Hamla Aurat Ka Khawab Mein Aag Dekhna</div>
+        <div class="tag">Mard Ka Khwab Mein Aag Dekhna</div>
+        <div class="tag">Bachon Ka Khwab Mein Aag Dekhna</div>
+        <div class="tag">Khwab Mein Aag Lagna</div>
+        <div class="tag">Khwab Mein Aag Jalti Dekhna</div>
+        <div class="tag">Khwab Mein Aag Ka Fa'al</div>
+        <div class="tag">Khwab Mein Aag Ka Khandani Tabeer</div>
+        <div class="tag">Khwab Mein Aag Ka Safar</div>
+        <div class="tag">Khwab Mein Aag Ka Samna Karna</div>
+        <div class="tag">Khwab Mein Aag Se Bachna</div>
+        <div class="tag">Khwab Mein Aag Ka Phailna</div>
+        <div class="tag">Khwab Mein Aag Ka Control Karna</div>
+        <div class="tag">Khwab Mein Aag Se Jalna</div>
+        <div class="tag">Khwab Mein Aag Aur Khoon Dekhna</div>
+        <div class="tag">Khwab Mein Aag Ki Shiddat</div>
+        <div class="tag">Khwab Mein Aag Ka Khauf</div>
+        <div class="tag">Khwab Mein Aag Aur Khushi</div>
+    </div>
+</div>
+    </div>
+
+    <!-- Scrolling Text -->
+    <div class="scrolling-text">
+        <p>Hum aap ko khawabon ki tabeer aur Islami tareeqay se mukammal maloomat faraham kar rahe hain.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-line">
+        <p style="text-align: center;">&copy; 2024 Khwab Ki Tabeer. All Rights Reserved.</p>
+    </div>
+</div>
+
+<script>
+    // Search function to filter blog posts
+    function searchBlogs() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        let blogPosts = document.querySelectorAll('.blog-post');
+        blogPosts.forEach(post => {
+            let title = post.getAttribute('data-title').toLowerCase();
+            let description = post.getAttribute('data-description').toLowerCase();
+            if (title.includes(input) || description.includes(input)) {
+                post.style.display = "block";
+            } else {
+                post.style.display = "none";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

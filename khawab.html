@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khawab Ki Tabeer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #1c1c1c, #4A4A4A);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        .option-button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background: #FFD700;
+            border: none;
+            border-radius: 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .option-button:hover {
+            background: #e0c200;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 500px;
+            color: white;
+        }
+
+        .popup h2 {
+            color: #FFD700;
+        }
+
+        .popup label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .popup input, .popup button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #FFD700;
+        }
+
+        .popup input {
+            background: #333;
+            color: white;
+        }
+
+        .popup button {
+            background: #FFD700;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background: #e0c200;
+        }
+
+        .popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>خواب کی تعبیر دیکھیں</h1>
+    </header>
+
+    <div>
+        <!-- Easypaisa/Bank Transfer Button -->
+        <button class="option-button" onclick="openPopup()">Easypaisa / Bank Transfer</button>
+
+        <!-- Watch Video Button -->
+        <button class="option-button" onclick="openWatchingPage()">Watch Video for Interpretation</button>
+    </div>
+    <!-- Popup for Easypaisa/Bank Transfer -->
+    <div class="popup" id="payment-popup">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <h2>Payment Instructions</h2>
+        <p>Send your payment (100-500 PKR) to:</p>
+        <p><strong>Easypaisa/JazzCash Number: 03131592732</strong></p>
+        <p>After sending the payment, provide the following details:</p>
+        <label for="transaction-id">Transaction ID</label>
+        <input type="text" id="transaction-id" placeholder="Enter Transaction ID">
+        <label for="upload-proof">Upload Payment Proof (Screenshot or PDF)</label>
+        <input type="file" id="upload-proof" accept="image/*,application/pdf">
+        <button onclick="submitPayment()">Submit Payment</button>
+    </div>
+
+    <script>
+        // Open the payment popup
+        function openPopup() {
+            document.getElementById('payment-popup').style.display = 'block';
+        }
+
+        // Close the payment popup
+        function closePopup() {
+            document.getElementById('payment-popup').style.display = 'none';
+        }
+
+        // Open watching.html in a new tab
+        function openWatchingPage() {
+            window.open("open blog/watching.html", "_blank");
+        }
+
+        // Submit payment details
+        function submitPayment() {
+            const transactionId = document.getElementById('transaction-id').value;
+            const proof = document.getElementById('upload-proof').files[0];
+
+            if (!transactionId || !proof) {
+                alert("Please fill all fields and upload the proof.");
+                return;
+            }
+
+            alert("Payment submitted successfully! We will verify it shortly.");
+            closePopup();
+        }
+    </script>
+</body>
+</html>

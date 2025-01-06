@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सपनों की व्याख्या</title>
+
+    <!-- Google Fonts से Noto Nastaliq Urdu फ़ॉन्ट लिंक -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+    <style>
+        /* बुनियादी रीसेट */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Nastaliq Urdu', sans-serif;
+            background: linear-gradient(135deg, #FFDEE9, #B5FFFC); /* बैकग्राउंड के लिए ग्रेडिएंट */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            direction: rtl; /* हिंदी टेक्स्ट के लिए दाएं से बाएं दिशा */
+        }
+
+        /* हेडर की स्टाइलिंग */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #444;
+        }
+
+        /* खोज और ब्लॉग के लिए कंटेनर */
+        .container {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* खोज बार सेक्शन */
+        .search-bar {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            background-color: #444;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #666;
+        }
+
+        /* ब्लॉग सेक्शन */
+        .blog-section {
+            flex: 2;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .blog {
+            margin-bottom: 20px;
+        }
+
+        .blog h3 {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .blog p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>सपनों की व्याख्या</h1>
+    </header>
+
+    <div class="container">
+        <!-- खोज बार सेक्शन -->
+        <div class="search-bar">
+            <h2>सपनों की व्याख्या खोजें</h2>
+            <input type="text" placeholder="यहां सपना लिखें...">
+            <button>खोजें</button>
+        </div>
+
+        <!-- ब्लॉग सेक्शन -->
+        <div class="blog-section">
+            <h2>नवीनतम ब्लॉग्स</h2>
+
+            <!-- ब्लॉग 1 -->
+            <div class="blog">
+                <h3>सपना: उड़ना</h3>
+                <p>यदि आपने सपने में उड़ते हुए देखा है, तो इसका मतलब है कि आप जीवन में नई ऊंचाइयों को प्राप्त कर रहे हैं।</p>
+            </div>
+
+            <!-- ब्लॉग 2 -->
+            <div class="blog">
+                <h3>सपना: समुंदर</h3>
+                <p>सपने में समुंदर देखना आपके दिल की गहराइयों को दर्शाता है। यह आपके जज्बात और अपने अंदर की बातें हैं।</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="blog-container">
+    <h1>Blogs</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Search dreams..." id="search-bar">
+    </div>
+    <div class="blogs">
+        {% for blog in blogs %}
+        <div class="blog">
+            <h2>{{ blog.title }}</h2>
+            <p>{{ blog.content|truncatewords:30 }}</p>
+            <p>Tags: {{ blog.tags }}</p>
+            <p>Hashtags: {{ blog.hashtags }}</p>
+            {% if blog.video_link %}
+            <a href="{{ blog.video_link }}" target="_blank">Watch Video</a>
+            {% endif %}
+            {% if blog.photo_link %}
+            <img src="{{ blog.photo_link.url }}" alt="Blog Image">
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

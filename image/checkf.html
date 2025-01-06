@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khobab Ki Tabeer</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #FFDEE9, #B5FFFC); /* Gradient background */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3.5rem; /* Larger title size */
+            color: #444;
+        }
+
+        /* Container for search and blogs */
+        .container {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* Search bar section */
+        .search-bar {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar h2 {
+            font-size: 2.5rem; /* Larger subtitle */
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            background-color: #444;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #666;
+        }
+
+        /* Blog section */
+        .blog-section {
+            flex: 2;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-section h2 {
+            font-size: 2.5rem; /* Larger subtitle */
+            margin-bottom: 20px;
+        }
+
+        .blog {
+            margin-bottom: 30px; /* Increased space between blogs */
+        }
+
+        .blog h3 {
+            font-size: 2rem; /* Larger blog title */
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .blog p {
+            font-size: 1.2rem; /* Larger paragraph text for easier readability */
+            color: #666;
+            line-height: 1.8; /* Increased line-height for better readability */
+        }
+
+        /* To hide blogs initially */
+        .blog.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Khobab Ki Tabeer</h1>
+    </header>
+
+    <div class="container">
+        <!-- Search bar section -->
+        <div class="search-bar">
+            <h2>Search Khawab Ki Tabeer</h2>
+            <input type="text" id="searchInput" placeholder="Khawab likhein yahan..." onkeyup="searchBlogs()">
+        </div>
+
+        <!-- Blog section -->
+        <div class="blog-section">
+            <h2>Latest Blogs</h2>
+
+            <!-- Blog 1 -->
+            <div class="blog" data-keywords="udaan bharna, khwab, safalta">
+                <h3>Khawab: Udaan bharna</h3>
+                <p>Agar aap ne khwab mein udaan bharte hue dekha hai, to iska matlab hai ke aap zindagi mein naye mukaam hasil kar rahe hain.</p>
+            </div>
+
+            <!-- Blog 2 -->
+            <div class="blog" data-keywords="aloo, khwab, tabeer, safalta, kasht">
+                <h3>Aloo</h3>
+                <p>Aloo Ke Khwabon Ki Tabeer:</p>
+                <p><strong>1. Aloo Dekhna (General):</strong><br>
+                Khwabon mein aloo dekhna, aam tor par zindagi ke sadharan aur chhote masail ka izhar karta hai. Aloo ka dekhna kaafi basic aur common hai, jo aap ki daily life ya apne kaam ki taraf ishara karta hai.</p>
+
+                <p><strong>2. Aloo Pakaana (Cooking Potatoes):</strong><br>
+                Khwab mein aloo pakaana ya aloo banate hue dekhna, khushhal aur mehnat se kamai karne ka izhar karta hai.</p>
+
+                <p><strong>3. Aloo Bichana (Selling Potatoes):</strong><br>
+                Agar aap khwab mein aloo bichate hue dekhte hain, toh yeh tabeer karta hai ke aap apni mehnat aur kaam ko dosron tak pohanchane ki koshish kar rahe hain.</p>
+
+                <p><strong>4. Kasht Karna (Cultivating Potatoes):</strong><br>
+                Khwab mein aloo ugana ya kasht karte hue dekhna, zindagi mein apne kaam ko lagaataar aur mehnat se karne ki taraf ishara karta hai.</p>
+
+                <p><strong>Conclusion:</strong><br>
+                Aloo ke khwab bohot hi aam aur aksar dekhe jaate hain. Inki tabeer kaafi versatile aur context ke hisaab se badalti rehti hai.</p>
+            </div> 
+        </div>
+    </div>
+
+    <script>
+        function searchBlogs() {
+            // Get the search input value
+            let searchValue = document.getElementById('searchInput').value.toLowerCase();
+
+            // Get all blog elements
+            let blogs = document.querySelectorAll('.blog');
+
+            // Loop through each blog and check if keywords match search input
+            blogs.forEach(function(blog) {
+                let keywords = blog.getAttribute('data-keywords').toLowerCase();
+
+                // If the blog's keywords contain the search value, show it, otherwise hide it
+                if (keywords.includes(searchValue)) {
+                    blog.classList.remove('hidden');
+                } else {
+                    blog.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
